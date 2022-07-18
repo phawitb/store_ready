@@ -1,0 +1,59 @@
+---Autu run App--
+---on jetsonano ubuntu18.04-----
+
+sudo apt install firefox
+sudo su >> check  >> /usr/bin/python3 /home/phawit/Documents/x1/barcode.py check run correctly  
+        >>pip3 install evdev
+
+which python
+which firefox
+
+sudo crontab -e
+@reboot /usr/bin/python3 /home/phawit/Documents/x1/application.py
+@reboot sudo /usr/bin/python3 /home/phawit/Documents/x1/barcode.py
+@reboot /usr/bin/firefox -kiosk http://127.0.0.1:5000
+
+Startup Application
+Name: store
+command: /usr/bin/firefox -kiosk http://127.0.0.1:5000
+comment: store
+
+-----------------------------------------------------------
+
+which python
+which google-chrome
+which chromium-browser
+
+crontab -e
+@reboot /usr/bin/python3 /home/phawit/Documents/v2/application.py
+@reboot /usr/bin/google-chrome -kiosk http://127.0.0.1:5000
+
+@reboot /usr/bin/python3 /home/phawit/Documents/x1/application.py
+@reboot /usr/bin/python3 /home/phawit/Documents/x1/barcode.py
+@reboot /usr/bin/chromium-browser -kiosk http://127.0.0.1:5000
+
+sudo crontab -e
+@reboot sudo /usr/bin/python3 /home/phawit/Documents/v2/barcode.py
+
+sudo apt install gnome-startup-applications
+im-lanch>add>Name: store
+	    >command: /usr/bin/google-chrome -kiosk http://127.0.0.1:5000
+	    >comment: store
+ref:https://linuxconfig.org/how-to-autostart-applications-on-ubuntu-20-04-focal-fossa-linux
+
+***if error
+**sudo su >>check install correctly
+**apt-get install evdev
+sudo apt install firefox
+
+#----------------------------------------------------------------------
+sudo python3 /home/phawit/Documents/v2/barcode.py
+python3 /home/phawit/Documents/v2/application.py
+google-chrome -kiosk http://127.0.0.1:5000
+
+
+sudo python3 /home/phawit/Documents/v2/barcode.py & python3 /home/phawit/Documents/v2/application.py & google-chrome -kiosk http://127.0.0.1:5000
+
+Signalschool25
+
+https://linuxconfig.org/how-to-autostart-applications-on-ubuntu-20-04-focal-fossa-linux

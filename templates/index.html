@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+    <script src="static/js/application.js"></script>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.1/pure-min.css">
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+      }
+      
+      .header {
+        background-color: #f1f1f1;
+        padding: 5px;
+        text-align: center;
+      }
+      
+      .column {
+        float: left;
+        padding: 10px;
+      }
+      
+      .column.left {
+        width: 10%;
+        text-align: center;
+      }
+      
+      .column.middle {
+        width: 60%;
+      }
+      
+      .column.right {
+        width: 30%;
+        text-align: center;
+      }
+      
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      img {
+        width: 100%;
+      }
+      
+      table, th, td {
+        border:1px solid black;
+      }
+      
+      @media screen and (max-width: 600px) {
+        .column.side, .column.middle {
+          width: 100%;
+        }
+      }
+      
+      .footer {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      td, tr,table {
+        border: 1px none #dddddd;
+      }
+      
+      </style>
+
+</head>
+<body>
+
+<div class="header">
+  <h1 style="text-align:center;font-size:60px;font-weight:bold;color:blue">Self Service</h1>
+  <div id="log2" style="text-align:right;font-size:40px;padding-right:50px;color:blue"></div>
+</div>
+
+<div class="row">
+  <div class="column left">
+    <!-- <img id="img" src="" /> -->
+  </div>
+  <div class="column middle">
+    <div id="log"></div>
+  </div>
+  <div class="column right">
+    <img id="img" src="" width="30%" height="30%"/>
+    <div id="log3" style="text-align:center;font-size:50px;font-weight:bold;color:red"></div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div id="log4" style="text-align:center;font-size:40px;font-weight:bold;color:red"></div>
+</div>
+
+<!-- <div class="container" id="content">
+    <div class="row">
+        <h3>Number list:</h3>
+        <div id="log3"></div>
+        <div id="log"></div>
+        <div id="log2"></div>
+        
+        <img id="img" src="" />
+    </div>
+</div> -->
+
+
+</body>
+</html>
