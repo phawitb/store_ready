@@ -18,6 +18,24 @@ Name: store
 command: /usr/bin/firefox -kiosk http://127.0.0.1:5000
 comment: store
 
+cleanlogs---------
+cd Documents/x1
+sudo mkdir scripts
+cd scripts
+sudo touch log-clean.sh
+
+sudo vim log-clean.sh  /// sudo nano log-clean.sh
+#!/bin/bash
+sudo rm -rf /var/log/syslo*
+sudo rm -rf /var/log/*.gz
+sudo rm -rf /var/log/apache2/*.gz
+
+sudo chmod a+x log-clean.sh
+
+sudo crontab -e
+*/1 * * * * sh /home/phawit/Documents/x1/scripts/log-clean.sh
+
+
 -----------------------------------------------------------
 
 which python
