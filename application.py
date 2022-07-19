@@ -210,7 +210,7 @@ def randomNumberGenerator():
         if Barcodes != getBarcodeFromCsv('/home/phawit/Documents/x1/static/current_barcode.csv'):
             start = time()
         else:
-            if time()-start > 15:
+            if time()-start > 30:
                 if Barcodes:
                     clear_all('/home/phawit/Documents/x1/static/current_barcode.csv')
                 start = time()
